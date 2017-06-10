@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="3"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/choseGasNo"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_selector"
+                android:text="@string/choseGasNo"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/queryRecord"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/choseGasNo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_selector"
+                android:text="@string/queryRecord"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/setting"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/setting_button_selector"
+                android:text="@string/setting"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_item_title"></include>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/qrCodePay"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@mipmap/ic_home_qrcode" />
+
+        <Button
+            android:id="@+id/shortCodePay"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/ic_short_qrcode" />
+
+        <LinearLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape_normal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_refresh" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

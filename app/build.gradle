@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.szxb"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    greendao {
+        schemaVersion 1
+        daoPackage 'com.szxb.entity'
+        targetGenDir 'src/main/java'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //注解工具库
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //网络请求库
+    compile 'com.yanzhenjie.nohttp:okhttp:1.1.1'
+    //事件总线EvenBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //greenDao数据库
+    compile 'org.greenrobot:greendao:3.2.0'
+    //greenDao数据库升级
+    compile 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0'
+    //工具库
+    compile 'com.blankj:utilcode:1.6.4'
+    //Toast库
+    compile 'com.github.GrenderG:Toasty:1.2.5'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile files('libs/commons-codec-1.4.jar')
+    compile files('libs/bcprov-jdk15on-1.53.jar')
+
+    //fragment管理
+    compile 'me.yokeyword:fragmentation:0.10.1'
+}

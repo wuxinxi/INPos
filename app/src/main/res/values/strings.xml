@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">POS支付</string>
+
+    <!--Home-->
+    <string name="gasNo">油枪</string>
+    <string name="gasCapacity">加油量</string>
+    <string name="gasMoney">总价</string>
+    <string name="gasMemberMoney">会员价</string>
+    <string name="gasPayStatus">支付状态</string>
+    <string name="choseGasNo">选择油枪</string>
+    <string name="queryRecord">交易记录</string>
+    <string name="setting">设置</string>
+
+    <string name="payTitle">交易明细</string>
+
+</resources>

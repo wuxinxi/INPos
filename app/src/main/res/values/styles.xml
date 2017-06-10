@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@mipmap/bg</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--   <item name="android:windowIsTranslucent" tools:targetApi="lollipop">true</item>-->
+    </style>
+
+
+    <style name="AppTheme.PopupOverlay" parent="AlertDialog.AppCompat.Light"></style>
+
+    <style name="AppTheme.AppBarOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+
+
+    <!--主页TextView Style-->
+    <style name="HomeItemText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!--主页TextView title style-->
+    <style name="HomeItemTitleText" parent="HomeItemText">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--下单页面TextView style-->
+    <style name="PayLayoutText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PayLayoutTextRight" parent="PayLayoutText">
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+
+    <style name="PayLayoutTextLeft" parent="PayLayoutText">
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+</resources>
